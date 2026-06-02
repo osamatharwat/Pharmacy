@@ -9,6 +9,7 @@ const GITHUB_IMAGE_BASE_URL = "https://raw.githubusercontent.com/osamatharwat/Ph
 
 // قائمة أسماء الباحثين الـ 14 مأخوذة بدقة تامة من مستند لقطة الشاشة
 const researchTeam = [
+    { name: "Ahmed Mohamed Elkamash", img: "Ahmed Mohamed Elkamash.jpeg" }
     { name: "Asmaa Fadl Kasim", img: "Asmaa Fadl Kasim.jpeg" },
     { name: "Manar Hisham Ellaham", img: "Manar Hisham Ellaham.jpeg" },
     { name: "Mostafa Ahmed Elmaazon", img: "Mostafa Ahmed Elmaazon.jpeg" },
@@ -22,7 +23,6 @@ const researchTeam = [
     { name: "Asmaa Gamal Abd Elmabood", img: "Asmaa Gamal Abd Elmabood.jpeg" },
     { name: "Merna Walid Behis", img: "Merna Walid Behis.jpeg" },
     { name: "Maya Wael Naeem", img: "Maya Wael Naem.jpeg" },
-    { name: "Ahmed Mohamed Elkamash", img: "Ahmed Mohamed Elkamash.jpeg" }
 ];
 
 // وظيفة البناء والضخ الديناميكي لبيانات الفريق فور تحميل الصفحة
