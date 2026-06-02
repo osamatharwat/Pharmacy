@@ -293,3 +293,84 @@ body {
     .hero-section h1 { font-size: 34px; }
     .nav-links { display: none; }
 }
+
+/* Extended Scientific References Layout Rules */
+.references-extended-spec {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+.ref-spec-card {
+    background: var(--bg-main);
+    border: 1px solid var(--borders-gold);
+    padding: 24px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.2s ease;
+}
+.ref-spec-card:hover {
+    border-color: var(--header-main);
+    background: var(--white);
+    box-shadow: 0 4px 12px rgba(181, 106, 58, 0.08);
+}
+.ref-meta {
+    max-width: 75%;
+    text-align: left;
+}
+.ref-journal {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--header-main);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 6px;
+}
+.ref-spec-card h4 {
+    font-size: 15.5px;
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.4;
+}
+.ref-authors {
+    font-size: 13px;
+    color: var(--sub-titles);
+    margin-top: 4px;
+    font-weight: 500;
+}
+.ref-redirect-btn {
+    background: var(--boxes-bg);
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: 1px solid var(--borders-gold);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+.ref-redirect-btn:hover {
+    background: var(--header-main);
+    color: var(--white);
+    border-color: var(--header-main);
+}
+
+@media (max-width: 768px) {
+    .ref-spec-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .ref-meta { max-width: 100%; }
+    .ref-redirect-btn { width: 100%; justify-content: center; }
+}
