@@ -17,7 +17,7 @@ const researchTeam = [
     { name: "Hazem Osama Yassin", img: "Hazem Osama Yassin.jpeg" },
     { name: "Kholoud Elsaeed Elsayed Saleh", img: "Kholoud Elsaeed Elsayed Saleh.jpeg" },
     { name: "Manar Hisham Ellaham", img: "Manar Hisham Ellaham.jpeg" },
-    { name: "Maya Wael Naeem", img: "Maya Wael Naeem.jpeg" },
+    { name: "Maya Wael Naeem", img: "Maya Wael Naem.jpeg" },
     { name: "Merna Walid Behis", img: "Merna Walid Behis.jpeg" },
     { name: "Mostafa Ahmed Elmaazon", img: "Mostafa Ahmed Elmaazon.jpeg" },
     { name: "Salma Mohamed Goda", img: "Salma Mohamed Goda.jpeg" },
