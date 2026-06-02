@@ -4,25 +4,25 @@
  * Dynamically maps images based on verified GitHub repository pathways.
  */
 
-// الرابط الخام الصحيح والمباشر لسحب الصور من مستودع جيت هب الخاص بك
+// الرابط المباشر للمستودع مع التأكيد على المسار الصحيح تماماً
 const GITHUB_IMAGE_BASE_URL = "https://raw.githubusercontent.com/osamatharwat/Pharmacy/main/";
 
-// قائمة أسماء الباحثين الـ 14 مأخوذة بدقة تامة من مستند لقطة الشاشة
+// القائمة مطابقة بنسبة 100% لأسماء ملفاتك على جيت هب بالامتداد الصغير .jpeg
 const researchTeam = [
-    { name: "Ahmed Mohamed Elkamash", img: "Ahmed Mohamed Elkamash.jpeg" }
-    { name: "Asmaa Fadl Kasim", img: "Asmaa Fadl Kasim.jpeg" },
-    { name: "Manar Hisham Ellaham", img: "Manar Hisham Ellaham.jpeg" },
-    { name: "Mostafa Ahmed Elmaazon", img: "Mostafa Ahmed Elmaazon.jpeg" },
-    { name: "Kholoud Elsaeed Elsayed Saleh", img: "Kholoud Elsaeed Elsayed Saleh.jpeg" },
-    { name: "Yasmine Ahmed Awadin", img: "Yasmine Ahmed Awadin.jpeg" },
+    { name: "Ahmed Mohamed Elkamash", img: "Ahmed Mohamed Elkamash.jpeg" },
     { name: "Amira Mohamed Masoud", img: "Amira Mohamed Masoud.jpeg" },
+    { name: "Asmaa Fadl Kasim", img: "Asmaa Fadl Kasim.jpeg" },
+    { name: "Asmaa Gamal Abd Elmabood", img: "Asmaa Gamal Abd Elmabood.jpeg" },
     { name: "Aya Abd Ellatif Nasr", img: "Aya Abd Ellatif Nasr.jpeg" },
     { name: "Hazem Osama Yassin", img: "Hazem Osama Yassin.jpeg" },
+    { name: "Kholoud Elsaeed Elsayed Saleh", img: "Kholoud Elsaeed Elsayed Saleh.jpeg" },
+    { name: "Manar Hisham Ellaham", img: "Manar Hisham Ellaham.jpeg" },
+    { name: "Maya Wael Naeem", img: "Maya Wael Naeem.jpeg" },
+    { name: "Merna Walid Behis", img: "Merna Walid Behis.jpeg" },
+    { name: "Mostafa Ahmed Elmaazon", img: "Mostafa Ahmed Elmaazon.jpeg" },
     { name: "Salma Mohamed Goda", img: "Salma Mohamed Goda.jpeg" },
     { name: "Shatha Ahmed Abdou Rezk", img: "Shatha Ahmed Abdou Rezk.jpeg" },
-    { name: "Asmaa Gamal Abd Elmabood", img: "Asmaa Gamal Abd Elmabood.jpeg" },
-    { name: "Merna Walid Behis", img: "Merna Walid Behis.jpeg" },
-    { name: "Maya Wael Naeem", img: "Maya Wael Naem.jpeg" },
+    { name: "Yasmine Ahmed Awadin", img: "Yasmine Ahmed Awadin.jpeg" }
 ];
 
 // وظيفة البناء والضخ الديناميكي لبيانات الفريق فور تحميل الصفحة
@@ -34,11 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
             const card = document.createElement("div");
             card.className = "member-card";
             
-            // سحب الصورة ديناميكياً مع ترميز المسافات بشكل آمن لمتصفحات الويب
-            const fullImgUrl = GITHUB_IMAGE_BASE_URL + encodeURIComponent(member.img);
+            // دمج الرابط بدون استخدام ترميز قد يكسر المسار في بعض المتصفحات القديمة
+            const fullImgUrl = GITHUB_IMAGE_BASE_URL + member.img;
             
             card.innerHTML = `
-                <img src="${fullImgUrl}" alt="${member.name}" class="member-photo" onerror="this.onerror=null; this.src='https://via.placeholder.com/150/E8D8C3/3F2E23?text=Pharmacist';">
+                <img src="${fullImgUrl}" alt="${member.name}" class="member-photo" onerror="this.onerror=null; this.src='https://via.placeholder.com/250x180/E8D8C3/3F2E23?text=Pharmacist';">
                 <h4>${member.name}</h4>
                 <p>Project Researcher</p>
             `;
