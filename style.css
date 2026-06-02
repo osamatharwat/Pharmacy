@@ -135,15 +135,16 @@ body {
 }
 .member-card:hover { transform: translateY(-4px); }
 .member-photo {
-    width: 160px;               /* تحديد عرض ثابت ومناسب للصور */
-    height: 160px;              /* جعل الارتفاع مساوياً للعرض ليكون المربع مثالي */
-    object-fit: contain;        /* يضمن إظهار الصورة بالكامل دون قص أي جزء من الوجه */
-    border-radius: 50%;         /* لمسة بروفيسورال: جعل الصور دائرية لمظهر طبي رسمي، أو استبدلها بـ 12px لو تحبها مربعة بحواف ناعمة */
-    background-color: var(--white); /* خلفية بيضاء تحت الصورة لتوحيد الفراغات */
-    margin: 0 auto 15px auto;   /* تملأ المنتصف وتترك مسافة مريحة فوق الاسم */
+    width: 150px;                 
+    height: 150px;              
+    object-fit: cover;            
+    object-position: center 15%; 
+    border-radius: 50%;           
+    background-color: var(--white);
+    margin: 0 auto 15px auto;   
     display: block;
     border: 2px solid var(--borders-gold);
-    padding: 4px;               /* يعطي إطاراً أبيضاً فخماً حول الصورة قبل خط الذهب */
+    padding: 3px;                 
     box-shadow: 0 4px 10px rgba(107, 74, 54, 0.1);
 }
 }
