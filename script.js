@@ -21,7 +21,7 @@ const researchTeam = [
     { name: "Shatha Ahmed Abdou Rezk", img: "Shatha Ahmed Abdou Rezk.jpeg" },
     { name: "Asmaa Gamal Abd Elmabood", img: "Asmaa Gamal Abd Elmabood.jpeg" },
     { name: "Merna Walid Behis", img: "Merna Walid Behis.jpeg" },
-    { name: "Maya Wael Naeem", img: "Maya Wael Naeem.jpeg" },
+    { name: "Maya Wael Naeem", img: "Maya Wael Naem.jpeg" },
     { name: "Ahmed Mohamed Elkamash", img: "Ahmed Mohamed Elkamash.jpeg" }
 ];
 
