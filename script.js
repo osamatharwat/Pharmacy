@@ -1,13 +1,13 @@
 /**
  * Tirzepatide Graduation Project - Automated System Engine
  * Faculty of Pharmacy - 2026
- * Dynamically maps images based on verified screenshot documents.
+ * Dynamically maps images based on verified GitHub repository pathways.
  */
 
-// مسار مستودع الصور المرفوعة على جيت هاب الخاص بك (قم باستبدال الرابط برابط حسابك المباشر)
-const GITHUB_IMAGE_BASE_URL = "https://github.com/osamatharwat/Pharmacy.git";
+// الرابط الخام الصحيح والمباشر لسحب الصور من مستودع جيت هب الخاص بك
+const GITHUB_IMAGE_BASE_URL = "https://raw.githubusercontent.com/osamatharwat/Pharmacy/main/";
 
-// قائمة أسماء الباحثين الـ 14 مأخوذة بدقة تامة من مستند لقطة الشاشة الملحق image_4a1de8.png
+// قائمة أسماء الباحثين الـ 14 مأخوذة بدقة تامة من مستند لقطة الشاشة
 const researchTeam = [
     { name: "Asmaa Fadl Kasim", img: "Asmaa Fadl Kasim.jpeg" },
     { name: "Manar Hisham Ellaham", img: "Manar Hisham Ellaham.jpeg" },
@@ -29,15 +29,16 @@ const researchTeam = [
 document.addEventListener("DOMContentLoaded", () => {
     const teamGrid = document.getElementById("github-team-grid");
     if (teamGrid) {
+        teamGrid.innerHTML = ""; // تنظيف الشبكة تماماً قبل الضخ
         researchTeam.forEach(member => {
             const card = document.createElement("div");
             card.className = "member-card";
             
-            // سحب الصورة ديناميكياً من المجلد على جيت هاب
+            // سحب الصورة ديناميكياً مع ترميز المسافات بشكل آمن لمتصفحات الويب
             const fullImgUrl = GITHUB_IMAGE_BASE_URL + encodeURIComponent(member.img);
             
             card.innerHTML = `
-                <img src="${fullImgUrl}" alt="${member.name}" class="member-photo" onerror="this.src='https://via.placeholder.com/150?text=Pharmacist'">
+                <img src="${fullImgUrl}" alt="${member.name}" class="member-photo" onerror="this.onerror=null; this.src='https://via.placeholder.com/150/E8D8C3/3F2E23?text=Pharmacist';">
                 <h4>${member.name}</h4>
                 <p>Project Researcher</p>
             `;
@@ -55,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const x = e.clientX - rect.left - (rect.width/2);
             const y = e.clientY - rect.top - (rect.height/2);
             
-            // تدوير المكبس ثلاثي الأبعاد تفاعلياً مع الماوس
             cube.style.transform = `rotateX(${-y * 0.4}deg) rotateY(${x * 0.4}deg)`;
         });
         
