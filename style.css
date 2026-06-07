@@ -1,11 +1,12 @@
 /* Custom Color Architecture Map Based on Mounjaro Guidelines */
-:root{
-    --bg:#f4f4f4;
-    --primary:#7a5230;
-    --secondary:#2d5ea8;
-    --text:#222222;
-    --card:#ffffff;
-    --border:#d8d8d8;
+:root {
+    --header-main: #B56A3A;     /* Ginger Brown */
+    --sub-titles: #6B4A36;      /* Coffee Brown */
+    --bg-main: #F8F4EE;         /* Warm Ivory */
+    --boxes-bg: #E8D8C3;        /* Soft Beige */
+    --borders-gold: #D9B382;    /* Light Gold */
+    --text-dark: #3F2E23;       /* Dark Brown */
+    --white: #ffffff;
 }
 
 * {
